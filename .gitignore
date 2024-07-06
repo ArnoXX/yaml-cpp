@@ -5,3 +5,7 @@ bin
 bin-int
 yaml-cpp.vcxproj
 yaml-cpp.vcxproj.filters
+*.json
+*.sqlite
+/.vs/yaml-cpp/v17
+/.vs/yaml-cpp/FileContentIndex

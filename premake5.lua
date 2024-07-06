@@ -1,21 +1,22 @@
 project "yaml-cpp"
 	kind "StaticLib"
 	language "C++"
+	location "%{wks.location}/Vendor/yaml-cpp"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/lib/%{cfg.buildcfg}")
+	objdir ("%{wks.location}/obj/%{cfg.buildcfg}")
 
 	files
 	{
-		"src/**.h",
-		"src/**.cpp",
+		"%{prj.location}/src/**.h",
+		"%{prj.location}/src/**.cpp",
 		
-		"include/**.h"
+		"%{prj.location}/include/**.h"
 	}
 
 	includedirs
 	{
-		"include"
+		"%{prj.location}/include"
 	}
 
 	defines
