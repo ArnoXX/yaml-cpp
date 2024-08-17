@@ -3,7 +3,7 @@ project "yaml-cpp"
 	language "C++"
 	location "%{wks.location}/Vendor/yaml-cpp"
 
-	targetdir ("%{wks.location}/lib/%{cfg.buildcfg}")
+	targetdir ("%{wks.location}/lib/")
 	objdir ("%{wks.location}/obj/%{cfg.buildcfg}")
 
 	files
@@ -27,13 +27,13 @@ project "yaml-cpp"
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "off"
+		staticruntime(srunt)
 
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "off"
+		staticruntime(srunt)
 
 	filter "configurations:Debug"
 		runtime "Debug"
